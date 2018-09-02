@@ -1,0 +1,13 @@
+Q, part number, footprint, ref_des
+2, 0, digikey-footprints:0603, R2 R3
+1, 1.5uH, PJS_smt_parts:SMT_passive_1008, L1
+1, 100k, digikey-footprints:0603, R1
+3, 10uF, digikey-footprints:0603, C1 C3 C4
+1, 1M, digikey-footprints:0603, R4
+1, 1nF, digikey-footprints:0603, C2
+1, EN, Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm, J2
+1, Metroid, PJS-icons:metroid, icon1
+1, Pgood, Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm, J4
+1, TPS63051, PJS_smt_parts:TI_VQFN_12, U1
+1, Vin, Degson:DG301-5.002P-12, J1
+1, Vout, Degson:DG301-5.002P-12, J3

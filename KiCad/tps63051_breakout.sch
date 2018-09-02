@@ -1,0 +1,370 @@
+EESchema Schematic File Version 4
+LIBS:tps63051_breakout-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "TPS63051 breakout board"
+Date "2018-08-15"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 8250 7100 0    25   ~ 0
+Copyright (c) 2018 Peter Shabino\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this hardware, software, and associated documentation files \n(the "Product"), to deal in the Product without restriction, including without limitation the rights to use, copy, modify, merge, publish, \ndistribute, sublicense, and/or sell copies of the Product, and to permit persons to whom the Product is furnished to do so, subject to the \nfollowing conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Product.\n\nTHE PRODUCT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF \nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE \nFOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION \nWITH THE PRODUCT OR THE USE OR OTHER DEALINGS IN THE PRODUCT.
+$Comp
+L metroid:Metroid icon1
+U 1 1 5B74EA92
+P 7050 6650
+F 0 "icon1" H 7075 6703 60  0000 L CNN
+F 1 "Metroid" H 7075 6597 60  0000 L CNN
+F 2 "PJS-icons:metroid" H 7050 6650 60  0001 C CNN
+F 3 "" H 7050 6650 60  0000 C CNN
+	1    7050 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5B74EB50
+P 4500 3850
+F 0 "J1" H 4500 3950 50  0000 C CNN
+F 1 "Vin" V 4600 3800 50  0000 C CNN
+F 2 "Degson:DG301-5.002P-12" H 4500 3850 50  0001 C CNN
+F 3 "~" H 4500 3850 50  0001 C CNN
+	1    4500 3850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5B74EBB0
+P 7450 3850
+F 0 "J3" H 7400 3950 50  0000 L CNN
+F 1 "Vout" V 7550 3700 50  0000 L CNN
+F 2 "Degson:DG301-5.002P-12" H 7450 3850 50  0001 C CNN
+F 3 "~" H 7450 3850 50  0001 C CNN
+	1    7450 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5B74ECD0
+P 5150 4100
+F 0 "C1" V 5100 4150 25  0000 L CNN
+F 1 "10uF" V 5200 4150 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 5150 4100 50  0001 C CNN
+F 3 "~" H 5150 4100 50  0001 C CNN
+	1    5150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5B74EE31
+P 6550 4300
+F 0 "C2" V 6500 4350 25  0000 L CNN
+F 1 "1nF" V 6600 4350 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 6550 4300 50  0001 C CNN
+F 3 "~" H 6550 4300 50  0001 C CNN
+	1    6550 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5B74EE9F
+P 6650 3950
+F 0 "R4" V 6650 3900 25  0000 L CNN
+F 1 "1M" V 6700 3850 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 6650 3950 50  0001 C CNN
+F 3 "~" H 6650 3950 50  0001 C CNN
+	1    6650 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L_Small L1
+U 1 1 5B74EF59
+P 6000 3550
+F 0 "L1" V 5822 3550 50  0000 C CNN
+F 1 "1.5uH" V 5913 3550 50  0000 C CNN
+F 2 "PJS_smt_parts:SMT_passive_1008" H 6000 3550 50  0001 C CNN
+F 3 "~" H 6000 3550 50  0001 C CNN
+	1    6000 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L TI:TPS63051 U1
+U 1 1 5B74FCE3
+P 6000 3750
+F 0 "U1" H 5800 3850 50  0000 C CNN
+F 1 "TPS63051" H 6000 3150 50  0000 C CNN
+F 2 "PJS_smt_parts:TI_VQFN_12" H 6000 3750 50  0001 C CNN
+F 3 "" H 6000 3750 50  0001 C CNN
+	1    6000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3750 6450 3550
+Wire Wire Line
+	6450 3550 6100 3550
+Wire Wire Line
+	6350 3750 6450 3750
+Wire Wire Line
+	5650 3750 5550 3750
+Wire Wire Line
+	5550 3750 5550 3550
+Wire Wire Line
+	5550 3550 5900 3550
+$Comp
+L Device:C_Small C3
+U 1 1 5B7505E5
+P 6900 4000
+F 0 "C3" V 6850 4050 25  0000 L CNN
+F 1 "10uF" V 6950 4050 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 6900 4000 50  0001 C CNN
+F 3 "~" H 6900 4000 50  0001 C CNN
+	1    6900 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5B75068D
+P 7050 4000
+F 0 "C4" V 7000 4050 25  0000 L CNN
+F 1 "10uF" V 7100 4050 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 7050 4000 50  0001 C CNN
+F 3 "~" H 7050 4000 50  0001 C CNN
+	1    7050 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5B7506B3
+P 5450 4050
+F 0 "R2" V 5450 4000 25  0000 L CNN
+F 1 "0" V 5500 3950 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 5450 4050 50  0001 C CNN
+F 3 "~" H 5450 4050 50  0001 C CNN
+	1    5450 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5B7507CA
+P 5450 4150
+F 0 "R3" V 5450 4100 25  0000 L CNN
+F 1 "0" V 5500 4050 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 5450 4150 50  0001 C CNN
+F 3 "~" H 5450 4150 50  0001 C CNN
+	1    5450 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5B761361
+P 4500 4150
+F 0 "J2" H 4500 4250 50  0000 C CNN
+F 1 "EN" V 4600 4100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4500 4150 50  0001 C CNN
+F 3 "~" H 4500 4150 50  0001 C CNN
+	1    4500 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3850 5300 3850
+Wire Wire Line
+	5350 4050 5300 4050
+Wire Wire Line
+	5300 4050 5300 3850
+Connection ~ 5300 3850
+Wire Wire Line
+	5300 3850 5150 3850
+Wire Wire Line
+	5150 4000 5150 3850
+Connection ~ 5150 3850
+Wire Wire Line
+	5150 3850 4900 3850
+Wire Wire Line
+	4700 3950 4800 3950
+Wire Wire Line
+	4800 3950 4800 4250
+Wire Wire Line
+	4700 4250 4800 4250
+Wire Wire Line
+	5000 3950 5000 4150
+Wire Wire Line
+	5000 4150 4900 4150
+Wire Wire Line
+	5000 3950 5650 3950
+Wire Wire Line
+	5350 4150 5300 4150
+Wire Wire Line
+	5550 4150 5650 4150
+Wire Wire Line
+	5550 4050 5650 4050
+$Comp
+L power:GND #PWR01
+U 1 1 5B762BA2
+P 5150 4350
+F 0 "#PWR01" H 5150 4100 50  0001 C CNN
+F 1 "GND" H 5155 4177 50  0000 C CNN
+F 2 "" H 5150 4350 50  0001 C CNN
+F 3 "" H 5150 4350 50  0001 C CNN
+	1    5150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5B762BC7
+P 7150 4350
+F 0 "#PWR03" H 7150 4100 50  0001 C CNN
+F 1 "GND" H 7155 4177 50  0000 C CNN
+F 2 "" H 7150 4350 50  0001 C CNN
+F 3 "" H 7150 4350 50  0001 C CNN
+	1    7150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5B762BEC
+P 6550 4600
+F 0 "#PWR02" H 6550 4350 50  0001 C CNN
+F 1 "GND" H 6555 4427 50  0000 C CNN
+F 2 "" H 6550 4600 50  0001 C CNN
+F 3 "" H 6550 4600 50  0001 C CNN
+	1    6550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4250 5150 4250
+Connection ~ 4800 4250
+Wire Wire Line
+	5150 4200 5150 4250
+Connection ~ 5150 4250
+Wire Wire Line
+	5150 4250 5300 4250
+Wire Wire Line
+	5300 4150 5300 4250
+Connection ~ 5300 4250
+Wire Wire Line
+	5300 4250 5650 4250
+Wire Wire Line
+	5150 4250 5150 4350
+Wire Wire Line
+	6350 4250 6450 4250
+Wire Wire Line
+	6350 4150 6550 4150
+Wire Wire Line
+	6550 4150 6550 4200
+Wire Wire Line
+	6450 4500 6550 4500
+Wire Wire Line
+	6550 4500 6550 4400
+Wire Wire Line
+	6450 4250 6450 4500
+Wire Wire Line
+	6350 3850 6450 3850
+Wire Wire Line
+	6350 3950 6450 3950
+Wire Wire Line
+	6450 3950 6450 3850
+Connection ~ 6450 3850
+Wire Wire Line
+	6350 4050 6500 4050
+Wire Wire Line
+	6450 3850 6800 3850
+Wire Wire Line
+	6550 3950 6500 3950
+Wire Wire Line
+	6500 3950 6500 4050
+Wire Wire Line
+	6750 3950 6800 3950
+Wire Wire Line
+	6800 3950 6800 3850
+Connection ~ 6800 3850
+Wire Wire Line
+	6800 3850 6900 3850
+Wire Wire Line
+	7050 3900 7050 3850
+Connection ~ 7050 3850
+Wire Wire Line
+	6900 3900 6900 3850
+Connection ~ 6900 3850
+Wire Wire Line
+	6900 3850 7050 3850
+Wire Wire Line
+	7050 3850 7250 3850
+Wire Wire Line
+	7250 3950 7150 3950
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5B76E3D6
+P 7450 4150
+F 0 "J4" H 7400 4250 50  0000 L CNN
+F 1 "Pgood" V 7550 4000 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7450 4150 50  0001 C CNN
+F 3 "~" H 7450 4150 50  0001 C CNN
+	1    7450 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4050 6750 4050
+Connection ~ 6500 4050
+Wire Wire Line
+	6750 4050 6750 4150
+Wire Wire Line
+	6750 4150 7250 4150
+Wire Wire Line
+	7150 3950 7150 4250
+Wire Wire Line
+	7150 4250 7250 4250
+Connection ~ 7150 4250
+Wire Wire Line
+	7050 4100 7050 4250
+Wire Wire Line
+	7050 4250 7150 4250
+Wire Wire Line
+	6900 4100 6900 4250
+Wire Wire Line
+	6900 4250 7050 4250
+Connection ~ 7050 4250
+Wire Wire Line
+	7150 4250 7150 4350
+Wire Wire Line
+	6550 4500 6550 4600
+Connection ~ 6550 4500
+Text Notes 4850 3800 0    50   ~ 0
+Vin 2.5V to 5.5V\n
+Text Notes 6500 3800 0    50   ~ 0
+Vout 3.3V @ 500mA\n
+Text Notes 6000 3650 0    25   ~ 0
+490-10574-1-ND
+$Comp
+L Device:R_Small R1
+U 1 1 5B780332
+P 4900 4000
+F 0 "R1" V 4900 3950 25  0000 L CNN
+F 1 "100k" V 4950 3900 25  0000 L CNN
+F 2 "digikey-footprints:0603" H 4900 4000 50  0001 C CNN
+F 3 "~" H 4900 4000 50  0001 C CNN
+	1    4900 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3900 4900 3850
+Connection ~ 4900 3850
+Wire Wire Line
+	4900 3850 4700 3850
+Wire Wire Line
+	4900 4100 4900 4150
+Connection ~ 4900 4150
+Wire Wire Line
+	4900 4150 4700 4150
+Text Notes 6150 3500 0    25   ~ 0
+Ipk ~1A
+Text Notes 6950 4100 0    25   ~ 0
+X5R
+Text Notes 5200 4200 0    25   ~ 0
+X5R
+$EndSCHEMATC
